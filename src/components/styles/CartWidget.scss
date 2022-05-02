@@ -1,0 +1,11 @@
+.cart-widget{
+  width: 50px;
+  order: 2;
+}
+@media only screen and(min-width: 768px) {
+  .cart-widget{
+    width: 200px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

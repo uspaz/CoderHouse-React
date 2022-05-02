@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import  './components/styles/NavBar.scss'
+import ItemListContainer from './components/ItemListContainer';
+import NavBar from './components/NavBar';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <header className="header">
+      <NavBar />
+      <ItemListContainer greeting="Tómate un respiro, destapa la felicidad" 
+      slogan="Lo que usted realmente necesitas es una botella de cerveza fría, con la etiqueta un poco mojada y esas gotas tan hermosas sobre la superficie del vaso."/>
+    </header>
   );
 }
 
