@@ -1,110 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
 
-.header{
-  height: 100vh;
-  width: 100%;
-  background-image: url("https://i.imgur.com/dNci6WI.jpg");
-  background-size: cover;
-  background-position: top center;
-  background-repeat: none;
-  background-attachment: fixed;
-  .header--container{
-    width: calc(100% - 20px);
-    height: 130px;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, .4);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    .container--logo{
-      width: 100%;
+.App{
+  .header{
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://i.imgur.com/dNci6WI.jpg");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: none;
+    background-attachment: fixed;
+    .header--container{
+      width: calc(100% - 20px);
+      height: 130px;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, .4);
       display: flex;
-      justify-content: center;
-      img{
-        width: 100px;
-      }
-    }
-    .menu--btn{
-      width: 90px;
-      display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       justify-content: space-around;
-      span{
-        font-size: 18px;
-        color: #fff;
-        font-weight: 500;
+      .container--logo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        img{
+          width: 100px;
+        }
       }
-      .menu--icon{
-        font-size: 27px;
+      .menu--btn{
+        width: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        span{
+          font-size: 18px;
+          color: #fff;
+          font-weight: 500;
+        }
+        .menu--icon{
+          font-size: 27px;
+        }
       }
-    }
-    .container--nav{
-      display: none;
+      .container--nav{
+        display: none;
+      }
     }
   }
 }
 
+
 @media only screen and (min-width: 768px){
-  .header{
-    .header--container{
-      height: 100px;
-      align-items: center;
-      .container--logo{
-        width: 200px;
-        order: 1;
-      }
-      .menu--btn{
-        display: none;
-      }
-      .container--nav{
-        display: block;
-        width: 200px;
-        order: 0;
-        font-family: 'Montserrat', sans-serif;
-        .nav--ul{
-          list-style: none;
-          width: 100%;
-          display: flex;
-          padding: 0px;
-          gap: 30px;
-          .item{
-            a{
-              color: #ffff;
-              text-decoration: none;
+  .App{
+    .header{
+      .header--container{
+        height: 100px;
+        align-items: center;
+        .container--logo{
+          width: 200px;
+          order: 1;
+        }
+        .menu--btn{
+          display: none;
+        }
+        .container--nav{
+          display: block;
+          width: 200px;
+          order: 0;
+          font-family: 'Montserrat', sans-serif;
+          .nav--ul{
+            list-style: none;
+            width: 100%;
+            display: flex;
+            padding: 0px;
+            gap: 30px;
+            .item{
+              a{
+                color: #ffff;
+                text-decoration: none;
+              }
             }
           }
         }
       }
     }
   }
-}
+  }
+  
 
 @media only screen and (min-width: 1024px){
-  .header{
-    background-position: 100% 30%;
-    .header--container{
-      .container--logo{
-        img{
-          width: 130px;
+  .App{
+    .header{
+      background-position: 100% 30%;
+      .header--container{
+        .container--logo{
+          img{
+            width: 130px;
+          }
         }
-      }
-      .container--nav{
-        .nav--ul{
-          font-size: 18px;
+        .container--nav{
+          .nav--ul{
+            font-size: 18px;
+          }
         }
       }
     }
   }
-}
+  }
+  
 
 @media only screen and (min-width: 1024px){
-  .header{
-    .header--container{
-      .container--nav{
-        .nav--ul{
-          font-size: 18px;
-          gap: 45px;
+  .App{
+    .header{
+      .header--container{
+        .container--nav{
+          .nav--ul{
+            font-size: 18px;
+            gap: 45px;
+          }
         }
       }
     }
