@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500&display=swap');
 
 .card--counter{
-  width: 200px;
+  width: 100%;
   height: auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
   justify-content: center;
+  gap: 10px; 
   .input--wrapper{
-    width: 100%;
+    width: 60%;
     height: 35px;
     display: flex;
     justify-content: center;
@@ -37,14 +37,15 @@
     }
   }
   .cart--btn{
-    width: 100%;
+    width: 80%;
     height: 35px;
     border: 1px solid #1e6091;
     color: #1e6091;
-    background-color: #fff;
+    background-color: transparent;
     border-radius: 3px;
     font-family: 'Nunito', sans-serif;
     font-size: 15px;
+    font-weight: 500;
     cursor: pointer;
     transition: background .7s ease-out;
     &:hover{

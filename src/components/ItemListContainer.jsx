@@ -1,14 +1,13 @@
-import ItemCount from './ItemCount'
+import ItemList from './ItemList'
 import './styles/ItemListContainer.scss'
 
+
 const ItemListContainer = () => {
-  function onAdd() {
-    alert('Ahora solo falta que la tomes')
-  }
+  
 
   return (
     <div>
-      <ItemCount stock={5} initial={1} onAdd={onAdd}/>
+      <ItemList />
     </div>
   )
 }

@@ -7,17 +7,25 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
   const [count, setCount] = useState(initial);
 
-  function addProduct(num) {
-      setCount(count + num);
+  function addProduct() {
+     if(count < stock){
+       setCount(count + 1)
+     }
+
+  }
+  function subtractProduct() {
+    if(count > initial){
+      setCount(count - 1)
+    }
   }
     
   return (
     <div className="card--counter">
       <div className="input--wrapper">
         <span className="counter">
-          <button onClick={()=> count > initial && addProduct(-1)}>-</button>
+          <button onClick={subtractProduct}>-</button>
           {count}
-          <button onClick={()=> count < stock && addProduct(+1)}>+</button>
+          <button onClick={addProduct}>+</button>
         </span>
       </div>
       <button className="cart--btn" onClick={onAdd}>Agregar al Carrito</button>
