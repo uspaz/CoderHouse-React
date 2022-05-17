@@ -1,6 +1,6 @@
-export const productList = [
+const productList = [
   {
-    id: 1,
+    id: '1',
     name: "Gasoline Soul",
     description: "",
     price: 120,
@@ -8,7 +8,7 @@ export const productList = [
     stock: 1
   },
   {
-    id: 2,
+    id: '2',
     name: "Capu Acu Sour",
     description: "",
     price: 100,
@@ -16,7 +16,7 @@ export const productList = [
     stock: 1
   },
   {
-    id: 3,
+    id: '3',
     name: "Double Vienna",
     description: "",
     price: 100,
@@ -24,3 +24,14 @@ export const productList = [
     stock: 1
   }
 ]
+
+
+export const getProducts = (id) => {
+  return new Promise((resolve)=>{
+      setTimeout(()=>{
+              const search = id ? productList.find(producto => producto.id === id ) : productList                                  
+              resolve( search )                           
+          }, 2000)
+      })            
+  
+}

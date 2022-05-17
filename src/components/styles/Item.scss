@@ -35,6 +35,25 @@
   .card--name{
     font-size: 26px;
     font-family: 'Nunito', sans-serif;
+    font-weight: 400;
     margin: 20px 0px 10px;
+  }
+  .card--btn{
+    width: 80%;
+    height: 35px;
+    margin: 10px 0px 0px;
+    background-color: transparent;
+    border: 1px solid #1e6091;
+    color: #1e6091;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    transition: background .7s ease-out;
+    &:hover{
+      color: #fff;
+      background-color: #1e6091;
+    }
   }
 }
