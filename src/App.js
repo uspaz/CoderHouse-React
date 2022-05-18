@@ -3,7 +3,7 @@ import  './components/styles/NavBar.scss'
 import NavBar from './components/NavBar';
 import HeaderItem from './components/HeaderItem';
 import ItemListContainer from './components/ItemListContainer';
-// import ItemDetailContainer from './components/ItemDetailContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       </header>
       <main className='main'>
         <ItemListContainer />
-        {/* <ItemDetailContainer /> */}
+        <ItemDetailContainer />
       </main>
     </div>
       
