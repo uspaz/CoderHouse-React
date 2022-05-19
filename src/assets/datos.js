@@ -29,9 +29,8 @@ const productList = [
 export const getProducts = (id) => {
   return new Promise((resolve)=>{
       setTimeout(()=>{
-              const search = id ? productList.find(producto => producto.id === id ) : productList                                  
+              const search = id ? productList.find(product => product.id === id ) : productList                                  
               resolve( search )                           
           }, 2000)
       })            
-  
 }

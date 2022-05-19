@@ -1,6 +1,10 @@
+import { Link } from 'react-router-dom';
+
 import './styles/NavBar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+
+
 import CartWidget from './CartWidget';
 
 
@@ -24,7 +28,7 @@ function NavBar() {
       <nav className='container--nav'>
         <ul className='nav--ul'>
           <li className='item'>
-            <a href='*/'>Tienda</a>
+            <Link to='/'> Tienda</Link>
           </li>
           <li className='item'>
             <a href='*/'>Nosotros</a>
