@@ -1,10 +1,13 @@
+import { useState } from 'react';
+import Confirmacion from './Confirmacion';
 import ItemCount from './ItemCount';
 import './styles/Item.scss';
 
 const ItemDetail = ({name, price, description, src}) => {
   
-  function onAdd() {
-    alert('Ahora solo falta que la tomes')
+  const [type, setType] = useState('button');
+  const onAdd = () =>{
+    setType('buttons')
   }
 
   return (
@@ -14,7 +17,12 @@ const ItemDetail = ({name, price, description, src}) => {
 
       <h2 className='card--name'>{name}</h2>
       <p className='card--description'>{description}</p>
-      <ItemCount stock={5} initial={1} onAdd={onAdd}/>
+      {
+        type === 'button' ?
+          <ItemCount stock={5} initial={1} onAdd={onAdd}/>
+          :
+          <Confirmacion />      
+      }
     </section>
   )
 }
