@@ -16,11 +16,10 @@ const ItemDetailContainer = () => {
     .catch(err => console.log(err))
   },[detId]); 
 
-  console.log(item);  
   return (
-    <div>
-      <h2 className="detail--container">Item Detail Container</h2>
-      <ItemDetail name={item.name} src={item.src} price={item.price} description={item.description}/>
+    <div className="detail--container">
+      <h2 className="detail--title">Item Detail Container</h2>
+      <ItemDetail item={item}/>
     </div>
   )
 }

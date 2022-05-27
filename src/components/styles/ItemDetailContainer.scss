@@ -1,5 +1,11 @@
 .detail--container{
   width: 100%;
-  margin: 50px 0px 80px;
-  text-align: center;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  .detail--title{
+    width: 100%;
+    margin: 50px 0px 80px;
+    text-align: center;
+  }
 }

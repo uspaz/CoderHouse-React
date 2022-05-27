@@ -1,0 +1,57 @@
+.cart--title{
+  width: 100%;
+  text-align: center;
+}
+.cart--container{
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  
+  .cart--detail{
+    width: 100%;
+    height: auto;
+
+    .cart--img{
+      width: 20%;
+      img{
+        width: 100%;
+        max-width: 100px;
+      }
+    }
+    .cart--name{
+      width: 30%;
+      
+    }
+    .cart--qty{
+      width: 15%;
+    }
+    .cart--price{
+      width: 15%;
+    }
+    .cart--remove{
+      width: 20%;
+      position: relative;
+      top: -10px;
+      font-size: 80px;
+      color: red;
+      cursor: pointer;
+    }
+  }
+}
+.trash--btn{
+  width: 100px;
+  height: 35px;
+  font-size: 20px;
+  border: 1px solid red;
+  border-radius: 5px;
+  background-color: transparent;
+  float: right;
+  cursor: pointer;
+  margin: 0px 15px 15px 0px;
+  transition: background .6s linear;
+  &:hover{
+    background-color: red;
+    color: #fff;
+  }
+}

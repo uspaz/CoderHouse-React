@@ -9,10 +9,13 @@ import HeaderItem from './components/HeaderItem';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
+import CartContextProvider from './context/CartContext';
 
 
 function App() {
   return (
+    <CartContextProvider>
+
       <BrowserRouter>
         <div className='App'>
           <header className="header">
@@ -28,8 +31,9 @@ function App() {
             <Route path='/*' element={ <Navigate to='/' replace />} />
           </Routes>
         </div>
-        </BrowserRouter>
+      </BrowserRouter>
       
+    </CartContextProvider>
   );
 }
 
