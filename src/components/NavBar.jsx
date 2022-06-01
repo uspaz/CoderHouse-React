@@ -10,6 +10,7 @@ import CartWidget from './CartWidget';
 
 function NavBar() {
   const logo = "https://i.imgur.com/bDbANwY.png";
+
   
   return (
     <div className='header--container'>
@@ -39,7 +40,7 @@ function NavBar() {
         </ul>
       </nav>
 
-      {/* Cart Widget */}
+      {/* Cart Widget*/}
       <CartWidget />
     </div>
   )

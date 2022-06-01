@@ -1,11 +1,20 @@
 .cart-widget{
-  width: 50px;
+  width: 70px;
+  height: auto;
   order: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .total--amount{
+    color: #fff;
+    font-size: 20px;
+  }
 }
 @media only screen and(min-width: 768px) {
   .cart-widget{
     width: 200px;
     display: flex;
     justify-content: flex-end;
+    gap: 30px;
   }
 }

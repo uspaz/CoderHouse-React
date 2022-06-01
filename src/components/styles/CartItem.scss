@@ -1,35 +1,41 @@
-.cart--title{
+.cart--title {
   width: 100%;
   text-align: center;
 }
-.cart--container{
+
+.cart--container {
   width: 100%;
   height: 150px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  
-  .cart--detail{
+
+  .cart--detail {
     width: 100%;
     height: auto;
 
-    .cart--img{
+    .cart--img {
       width: 20%;
-      img{
+
+      img {
         width: 100%;
         max-width: 100px;
       }
     }
-    .cart--name{
+
+    .cart--name {
       width: 30%;
-      
+
     }
-    .cart--qty{
+
+    .cart--qty {
       width: 15%;
     }
-    .cart--price{
+
+    .cart--price {
       width: 15%;
     }
-    .cart--remove{
+
+    .cart--remove {
       width: 20%;
       position: relative;
       top: -10px;
@@ -39,7 +45,8 @@
     }
   }
 }
-.trash--btn{
+
+.trash--btn {
   width: 100px;
   height: 35px;
   font-size: 20px;
@@ -48,10 +55,52 @@
   background-color: transparent;
   float: right;
   cursor: pointer;
-  margin: 0px 15px 15px 0px;
+  margin: 12px 15px 15px 0px;
   transition: background .6s linear;
-  &:hover{
+
+  &:hover {
     background-color: red;
     color: #fff;
   }
+}
+
+.negative {
+  background-color: #ff758f;
+  height: 70px;
+  margin: 22px auto;
+  width: 90%;
+  line-height: 70px;
+  border-radius: 10px;
+  font-size: calc(1rem + 1vw);
+}
+
+a {
+  text-decoration: none;
+  cursor: default;
+
+  .btn--home {
+    width: 200px;
+    height: 40px;
+    display: block;
+    margin: 30px auto 30px;
+    font-size: 18px;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+}
+.total--price{
+  width: 220px;
+  height: 40px;
+  background-color: #4f5d75;
+  display: flex;
+  align-items: center;
+  margin: 10px 0px 10px 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
 }

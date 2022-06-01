@@ -44,6 +44,7 @@
       .container--nav{
         display: none;
       }
+      
     }
   }
 }
@@ -77,6 +78,8 @@
               a{
                 color: #ffff;
                 text-decoration: none;
+                cursor: pointer;
+
               }
             }
           }

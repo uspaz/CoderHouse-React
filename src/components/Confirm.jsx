@@ -9,12 +9,6 @@ function Confirmacion() {
           Finalizar Compra
         </button>
       </Link>
-
-      <Link to='/'>
-        <button className='card--btn-second'>
-          Seguir comprando
-        </button>
-      </Link>
     </div>
   )
 }
