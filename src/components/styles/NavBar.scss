@@ -75,11 +75,38 @@
             padding: 0px;
             gap: 30px;
             .item{
+              color: #ffff;
+              cursor: pointer;
+              position: relative;
               a{
                 color: #ffff;
                 text-decoration: none;
                 cursor: pointer;
-
+              }
+              .item--category{
+                list-style: none;
+                position: absolute;
+                width: 150px;
+                max-height: 0px;
+                overflow: hidden;
+                line-height: 30px;
+                background-color: #333;
+                border-radius: 10px;
+              }
+              &:hover{
+                .item--category{
+                  max-height: 300px;
+                  padding: 10px 5px 10px;
+                  li{
+                    &:hover{
+                      background-color: #fff;
+                      border-radius: 5px;
+                      a{
+                        color: #000;
+                      }
+                    }
+                  }
+                }
               }
             }
           }

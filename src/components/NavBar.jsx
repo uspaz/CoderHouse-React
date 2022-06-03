@@ -31,8 +31,14 @@ function NavBar() {
           <li className='item'>
             <Link to='/'> Tienda</Link>
           </li>
-          <li className='item'>
-            <a href='*/'>Nosotros</a>
+          <li className='item'>Categorias
+            <ul className='item--category'>
+              <li><Link to='/'>Cerveza</Link></li>
+              <li><Link to='/'>Fernet</Link></li>
+              <li><Link to='/'>Ron</Link></li>
+              <li><Link to='/'>Tequila</Link></li>
+              <li><Link to='/'>Whisky</Link></li>
+            </ul>
           </li>
           <li className='item'>
             <a href='*/'>Contacto</a>
