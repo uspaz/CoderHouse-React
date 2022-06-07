@@ -1,4 +1,6 @@
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useState } from "react";
+import {addDoc, collection, documentId, getDocs, getFirestore, query, where, writeBatch, } from 'firebase/firestore';
+import Swal from "sweetalert2";
 
 const CartContext = createContext([]);
 
@@ -6,6 +8,7 @@ export const useCartContext = () => useContext(CartContext);
 
 const CartContextProvider = ({ children }) => {
   const [cartList, setCartList] = useState([]);
+  const [dataForm, setDataForm ] = useState({name: '' , email: '', phone: '', address: ''});
 
   const isInCart = (id) => {
     return cartList.some(e => e.id === id);
@@ -44,6 +47,59 @@ const CartContextProvider = ({ children }) => {
     return cartList.reduce((count, e) => count + (e.qty * e.price), 0)
   }
 
+  async function createOrder(e) {
+    e.preventDefault()
+    let order = {}
+
+    order.buyer = dataForm
+    order.total = totalPrice()
+
+    order.items = cartList.map(e => {
+        return {
+            product: e.id,
+            name: e.name,
+            price: e.price * e.qty,
+            quantity: e.qty
+        }
+    })
+    const db = getFirestore()
+    const queryCollection = collection(db, 'orders')
+    addDoc(queryCollection, order)
+        .catch(err => console.log(err))
+        .finally(() => clearCart())
+
+
+    const queryCollectionStock = collection(db, 'productos')
+    const queryUpdateStock = await query(
+        queryCollectionStock,
+        where(documentId(), 'in', cartList.map(e => e.id))
+    )
+
+    const batch = writeBatch(db)
+
+    await getDocs(queryUpdateStock)
+        .then(resp => { resp.docs.forEach(res => batch.update(res.ref, { stock: res.data().stock - cartList.find(e => e.id === res.id).qty })) })
+        .catch(err => console.log(err))
+        .finally(() => batch.commit())
+
+    Swal.fire({
+      icon: "success",
+      title: dataForm.name,
+      text: 'Su compra a sido realizada',
+      showConfirmButton: false,
+      timer: 2000
+    })
+  }
+
+  const fillOutForm = (e) => {
+    setDataForm({
+        ...dataForm,
+        [e.target.name]: e.target.value        
+    })
+}
+
+console.log(dataForm);
+
   return (
     <CartContext.Provider value={{
       cartList,
@@ -51,7 +107,9 @@ const CartContextProvider = ({ children }) => {
       clearCart,
       removeItem,
       totalAmount,
-      totalPrice
+      totalPrice,
+      createOrder,
+      fillOutForm
     }}>
       {children}
     </CartContext.Provider>

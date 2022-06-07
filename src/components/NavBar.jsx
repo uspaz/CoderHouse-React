@@ -35,8 +35,6 @@ function NavBar() {
             <ul className='item--category'>
               <li><Link to='/'>Cerveza</Link></li>
               <li><Link to='/'>Fernet</Link></li>
-              <li><Link to='/'>Ron</Link></li>
-              <li><Link to='/'>Tequila</Link></li>
               <li><Link to='/'>Whisky</Link></li>
             </ul>
           </li>
