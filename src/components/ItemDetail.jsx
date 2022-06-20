@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useCartContext } from '../context/CartContext';
 import Confirm from './Confirm';
 import ItemCount from './ItemCount';
-import './styles/Item.scss';
+import './styles/ItemDetail.scss';
 
 const ItemDetail = ({item}) => {
   
@@ -16,7 +16,7 @@ const ItemDetail = ({item}) => {
   }
 
   return (
-    <section className='product--card'>
+    <section className='product--card-detail'>
       <div className='section--img'>
         <span className='card--price'>${price}</span>
         <img className='card--img' src={src} alt=""/>

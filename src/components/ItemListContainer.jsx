@@ -4,6 +4,7 @@ import ItemList from './ItemList';
 import { useParams } from "react-router-dom";
 
 import './styles/ItemListContainer.scss'
+import Loader from "./Loader";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -11,21 +12,24 @@ const ItemListContainer = () => {
   const { id } = useParams();
   
   useEffect(() => {
-    const db = getFirestore()    
-    const dbCollection = collection(db, 'Products')
-    const queryCollectionFilter = id ? query(dbCollection, where('categoria', '==', id)) : dbCollection
+    setTimeout(() =>{
+      const db = getFirestore()    
+      const dbCollection = collection(db, 'Products')
+      const queryCollectionFilter = id ? query(dbCollection, where('category', '==', id)) : dbCollection
 
-    getDocs(queryCollectionFilter)
-    .then(res => setProducts( res.docs.map(product => ( { id: product.id, ...product.data() } ) ) ) )
-    .catch((err)=> console.log(err))
-    .finally( () => setLoader(false))
-      
+      getDocs(queryCollectionFilter)
+      .then(res => setProducts( res.docs.map(product => ( { id: product.id, ...product.data() } ) ) ) )
+      .catch((err)=> console.log(err))
+      .finally( () => setLoader(false))
+    }, 500) 
   },[id]);
+    
+    
 
   return (
     <div>
       { loader ? 
-          <h2>Cargando los Productos</h2>
+          <Loader />
           :
           <ItemList products={products}/>
       }

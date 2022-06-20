@@ -8,26 +8,6 @@
   align-items: center;
   justify-content: center;
   padding-bottom: 20px;
-  .card--price{
-    position: absolute;
-    top: 0px;
-    right: 32px;
-    color: #fff;
-    font-size: 18px;
-    font-family: 'Nunito', sans-serif;
-    z-index: 1;
-    &::before{
-      content: '';
-      position: absolute;
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      background-color: #000;
-      z-index: -1;
-      right: -32px;
-      top: -45px;
-    }
-  }
   .card--img{
     background-color: transparent;
     width: 124px;
@@ -58,56 +38,16 @@
       background-color: #1e6091;
     }
   }
-  .card--description{
-    padding: 0px 15px;
-    font-family: 'Montserrat', sans-serif;
-    font-style: italic;
-  }
-}
-
-@media only screen and(min-width: 480px) {
- .product--card{
-   .card--price{
-     right: 40px;
-   }
- } 
 }
 
 @media only screen and(min-width: 768px){
   .product--card{
+    width: 500px;
+    height: 530px;
     justify-content: space-around;
-    .section--img {
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      .card--price{
-        left: calc(100% - 60%);
-        &::before{
-          left: -30px;
-        }
-      }
+    .card--img{
+      height: 400px;
     }
-    .section--data{
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-  }
-}
-
-@media only screen and(min-width: 1200px){
-  .product--card{
-    .section--img{
-      .card--img{
-        width: 196px;
-      }
-    }
-    .section--data{
-      align-items: center;
-      .card--description{
-        width: 80%;
-      }
-    }
+    
   }
 }

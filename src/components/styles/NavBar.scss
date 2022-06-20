@@ -10,11 +10,20 @@
     background-position: top center;
     background-repeat: none;
     background-attachment: fixed;
+    z-index: -1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, .4);
+      z-index: 0;
+    }
     .header--container{
       width: calc(100% - 20px);
       height: 130px;
       padding: 10px;
-      background-color: rgba(0, 0, 0, .4);
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
@@ -23,6 +32,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        z-index: 1;
         img{
           width: 100px;
         }
@@ -32,6 +42,7 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
+        z-index: 1;
         span{
           font-size: 18px;
           color: #fff;
@@ -53,6 +64,11 @@
 @media only screen and (min-width: 768px){
   .App{
     .header{
+      height: 70vh;
+      &::before{
+        height: 70vh;
+      }
+      background-position: bottom;
       .header--container{
         height: 100px;
         align-items: center;

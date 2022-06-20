@@ -5,7 +5,7 @@ import { useCartContext } from "../context/CartContext";
 import Form from "./Form";
 
 const CartList = ({products}) => {
-  const {clearCart, totalPrice, removeItem} = useCartContext()
+  const {clearCart, removeItem} = useCartContext()
 
   return (
     <>
@@ -31,7 +31,6 @@ const CartList = ({products}) => {
             })}
           </table>
           <button className="trash--btn" onClick={clearCart}><FontAwesomeIcon icon={faTrash}/></button>
-          <span className="total--price">El precio total es {totalPrice()}</span>
           <Form />
         </>
       :

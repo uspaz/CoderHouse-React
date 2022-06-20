@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 import './App.scss';
 import  './components/styles/NavBar.scss'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import NavBar from './components/NavBar';
@@ -26,6 +27,7 @@ function App() {
           <Routes>
             <Route path='/' element={<ItemListContainer />} />
             <Route path='/detail/:detId' element={<ItemDetailContainer />} />
+            <Route path='/category/:id' element={<ItemListContainer />} />
             <Route path='/cart' element={ <Cart />} />
             
             <Route path='/*' element={ <Navigate to='/' replace />} />

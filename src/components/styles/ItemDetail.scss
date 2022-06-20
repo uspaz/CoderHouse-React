@@ -1,0 +1,113 @@
+.product--card-detail{
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  .card--price{
+    position: absolute;
+    top: 0px;
+    right: 32px;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    z-index: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background-color: #000;
+      z-index: -1;
+      right: -32px;
+      top: -45px;
+    }
+  }
+  .card--img{
+    background-color: transparent;
+    width: 124px;
+  }
+  .card--name{
+    width: 100%;
+    font-size: 26px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    margin: 20px 0px 10px;
+    text-align: center;
+  }
+  .card--btn{
+    width: 100%;
+    height: 35px;
+    margin: 10px 0px 0px;
+    background-color: transparent;
+    border: 1px solid #1e6091;
+    color: #1e6091;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    transition: background .7s ease-out;
+    &:hover{
+      color: #fff;
+      background-color: #1e6091;
+    }
+  }
+  .card--description{
+    padding: 0px 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+  }
+}
+
+@media only screen and(min-width: 480px) {
+ .product--card-detail{
+   .card--price{
+     right: 40px;
+   }
+ } 
+}
+
+@media only screen and(min-width: 768px){
+  .product--card-detail{
+    justify-content: space-around;
+    .section--img {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      .card--price{
+        left: calc(100% - 60%);
+        &::before{
+          left: -30px;
+        }
+      }
+    }
+    .section--data{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
+
+@media only screen and(min-width: 1200px){
+  .product--card-detail{
+    .section--img{
+      .card--img{
+        width: 196px;
+      }
+    }
+    .section--data{
+      align-items: center;
+      .card--description{
+        width: 80%;
+      }
+    }
+  }
+}
