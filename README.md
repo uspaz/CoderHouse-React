@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Moro Beer
+## Proyecto Final React Js - Matias Teijeiro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Realice un e-commerce de bebidas alcoholicas, donde simula la compra de tales productos. El sitio fue realizado con React y complementado con otras tecnologias.
 
-## Available Scripts
+## Páginas
 
-In the project directory, you can run:
+<ul>
+  <li>Tienda : Es la página principal de mi sitio, donde podrás encontrar el logo, la navegación hacia las otras páginas, un slogan y todos los productos colocados cargados en el sitio junto a un botón para ver los detalles de cada uno.</li>
+  <br>
+  <li>Categorias : Esto es un apartado donde podrás seleccionar que tipos de bebidas tenemos, para luego poder observar el producto más detalladamente. Cada producto tiene una página propìa en la que muestra una descripción, un stock, su imagen, su precio y un botón para agregar al carrito. Si se lo agrega al carrito luego aparecera un botón para ir al carrito y finalizar la compra</li>
+  <br>
+  <li>Carrito : Aquí encontraras los productos que agregaste con una previsualización del producto, precio, nombre, cantidad y para retirarlo si no desea. Luego un botón para quitar todos los productos del carrito y un modal para agregar los datos para finalizar la compra</li>
+    <br>
+  <li>Contacto : Esta página no fue realizada, pero se agrego al Navbar para dar un detalle estetico :sweat_smile:</li>
+</ul>
+<br>
 
-### `npm start`
+## Librerías
+<ul>
+  <li>FiraBase : Es una base de datos provista por Google, la cual utilice para guardar la lista de productos, las órdenes de compra y luego mostrar esos datos</li>
+  <br>
+  <li>React Router Dom : Esta herramienta permite implementar enrutamiento dinámico basado en componentes, esto me facilito implementar la navegación en React</li>
+  <br>
+  <li>Sweet Alert : La utilice para crear una alerta personalizada al finalizar compra de los productos</li>
+</ul>
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Otros
+<ul>
+  <li>Bootstrap : Implemente este framework para agregar el modal a la hora de agregar los datos para finalizar la compra</li>
+  <br>
+  <li>Sass : Utilice este pre-procesador para darle estilos a las páginas</li>
+  <br>
+  <li>Font Awesome : De este sitio utilice los iconos para la página del Carrito y el Navbar</li>
+</ul>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Deploy
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+El deploy del sitio se encuentra en Netlify, adjunto link => https://moro-beer-react.netlify.app/
