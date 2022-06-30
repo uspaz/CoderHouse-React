@@ -65,6 +65,15 @@ const CartContextProvider = ({ children }) => {
     const db = getFirestore()
     const queryCollection = collection(db, 'orders')
     addDoc(queryCollection, order)
+    .then(res => {
+      Swal.fire({
+        icon: "success",
+        title: dataForm.name,
+        text: `Su código de compra es: ${res.id}`,
+        showConfirmButton: false,
+        timer: 2000
+      })
+    })
         .catch(err => console.log(err))
         .finally(() => clearCart())
 
@@ -82,13 +91,7 @@ const CartContextProvider = ({ children }) => {
         .catch(err => console.log(err))
         .finally(() => batch.commit())
 
-    Swal.fire({
-      icon: "success",
-      title: dataForm.name,
-      text: 'Su compra a sido realizada',
-      showConfirmButton: false,
-      timer: 2000
-    })
+   
   }
 
   const fillOutForm = (e) => {
@@ -97,9 +100,6 @@ const CartContextProvider = ({ children }) => {
         [e.target.name]: e.target.value        
     })
 }
-
-console.log(dataForm);
-
   return (
     <CartContext.Provider value={{
       cartList,
